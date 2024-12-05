@@ -1,0 +1,253 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --purple-100: hsl(254, 88%, 90%);
+  --purple-500: hsl(256, 67%, 59%);
+  --yellow-100: hsl(31, 66%, 93%);
+  --yellow-500: hsl(39, 100%, 71%);
+  --white: hsl(0, 0%, 100%);
+  --black: hsl(0, 0%, 7%);
+}
+img {
+  max-width: 100%;
+}
+body {
+  font-family: "DM Sans", sans-serif;
+  background: #dededeb4;
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+}
+h1,
+h2,
+h3 {
+  font-weight: 500;
+  line-height: 0.9;
+  letter-spacing: -1px;
+}
+
+.grid {
+  max-width: 80%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(10, 3.5rem);
+  gap: 1.5rem;
+}
+
+.grid-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 0.5rem;
+  padding: 0 2.5rem;
+  color: var(--black);
+
+  overflow: hidden;
+}
+@media (max-width: 992px) {
+  .grid-item {
+    padding: 4rem;
+    gap: 2rem;
+    flex-direction: column !important;
+  }
+}
+@media (max-width: 520px) {
+  .grid .grid-item {
+    width: 90vw;
+    margin-right: 5vw;
+  }
+}
+.hero {
+  background: var(--purple-500);
+  color: var(--white);
+  grid-column: 2 / 4;
+  grid-row: 1 / 5;
+  font-size: 3rem;
+  text-align: center;
+  font-weight: 500;
+  gap: 1rem;
+}
+.hero h1 {
+  font-size: 3.5rem;
+  font-weight: 400;
+}
+.hero img {
+  max-width: 45%;
+}
+.hero h1 span {
+  color: var(--yellow-500);
+  font-weight: 400;
+}
+.hero h2 {
+  font-size: 1.3rem;
+  font-weight: 200;
+}
+.create-schedule {
+  background: var(--yellow-100);
+  grid-row: 1 / 6;
+  font-size: 1.4rem;
+}
+.create-schedule img {
+  margin-top: 25px;
+  max-width: 93%;
+}
+.create-schedule h1 span {
+  color: var(--purple-500);
+  font-style: italic;
+}
+.schedule {
+  background: var(--purple-100);
+  grid-column: 4 / 5;
+  grid-row: 1 / 8;
+  gap: 2rem;
+}
+.schedule h2 {
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 0;
+  font-size: 1.2rem;
+}
+.schedule img {
+  transform: translateX(85px);
+  max-width: 165%;
+}
+
+.ai-content {
+  background: var(--yellow-500);
+  grid-row: 6 / 11;
+  justify-content: space-around;
+  font-size: 2.2rem;
+}
+.ai-content h1 {
+  font-size: 1.7rem;
+}
+.ai-content img {
+  max-width: 103%;
+}
+
+.manage {
+  background: var(--white);
+  grid-column: 2 / 3;
+  grid-row: 5 / 8;
+}
+.manage img {
+  max-width: 145%;
+  transform: translateX(57px);
+}
+.manage h1 {
+  font-size: 1.8rem;
+  margin-top: 15px;
+}
+
+.posting-schedule {
+  background: var(--yellow-500);
+  grid-column: 3 / 4;
+  grid-row: 5 / 8;
+  padding-top: 3.7rem;
+}
+.posting-schedule h1 {
+  padding: 1.2rem 0;
+  font-size: 1.9rem;
+}
+
+.growth {
+  background: var(--white);
+  grid-column: 2 / 3;
+  grid-row: 8 / 11;
+  justify-content: space-around;
+}
+.growth img {
+  max-width: 84%;
+}
+.growth h1 {
+  font-size: 1.2rem;
+  font-weight: normal;
+}
+.growth h1 span {
+  font-size: 3.6rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  display: block;
+}
+.followers {
+  background: var(--purple-500);
+  grid-column: 3 / 5;
+  grid-row: 8 / 11;
+  color: var(--white);
+  flex-direction: row-reverse;
+}
+.followers img {
+  max-width: 40%;
+}
+
+@media (max-width: 992px) {
+  .grid {
+    display: flex;
+    flex-direction: column;
+    width: 94vw;
+  }
+  .grid-item {
+    grid-column: 1 / 2;
+  }
+  .grid .hero {
+    order: -8;
+  }
+  .hero img {
+    max-width: 65%;
+  }
+  .grid .ai-content {
+    order: 1;
+  }
+  .grid .followers {
+    flex-direction: column-reverse !important;
+  }
+  .grid .followers img {
+    max-width: 100%;
+  }
+  .grid .posting-schedule img {
+    transform: translateY(87px);
+  }
+  .grid .manage {
+    order: -7;
+  }
+  .grid .manage img {
+    max-width: 100%;
+    transform: translateX(14px);
+  }
+  .grid .manage h1 {
+    font-size: 2rem;
+  }
+  .grid .posting-schedule {
+    order: -6;
+  }
+  .grid .posting-schedule img {
+    transform: translate(-38px, 68px);
+  }
+  .schedule {
+    order: -5;
+    text-align: center;
+  }
+  .schedule img {
+    transform: translate(0);
+    max-width: 100%;
+  }
+  .grid .followers {
+    order: -4;
+    text-align: center;
+  }
+  .grid .growth {
+    order: -3px;
+  }
+  .grid .ai-content {
+    font-size: 1.2rem;
+  }
+  .grid .ai-content img {
+    max-width: 90%;
+  }
+}
